@@ -23,13 +23,25 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Install dependencies
-        run: npm ci
+        run: |
+          echo "Node version: $(node -v)"
+          echo "NPM version: $(npm -v)"
+          npm install
+        env:
+          DEBUG: "*"
       - name: Build
-        run: npm run build
+        run: |
+          echo "Building..."
+          npm run build 2>&1
+      - name: Check build output
+        run: |
+          ls -la build/ 2>/dev/null || echo "No build directory!"
       - name: Upload artifact
+        if: success()
         uses: actions/upload-pages-artifact@v4
         with:
           path: ./build
       - name: Deploy to GitHub Pages
+        if: success()
         id: deployment
         uses: actions/deploy-pages@v5
