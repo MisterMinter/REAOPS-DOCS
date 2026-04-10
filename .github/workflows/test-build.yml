@@ -15,14 +15,15 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
+      - name: Verify Node version
+        run: |
+          echo "Node version: $(node -v)"
+          echo "NPM version: $(npm -v)"
+      - name: Clear any cache
+        run: |
+          rm -rf node_modules package-lock.json .docusaurus
+          npm cache clean --force
       - name: Install
-        run: |
-          echo "=== Node version ==="
-          node -v
-          npm install 2>&1
-        env:
-          DEBUG: "*"
+        run: npm install
       - name: Build
-        run: |
-          echo "=== Building ==="
-          npm run build 2>&1
+        run: npm run build
