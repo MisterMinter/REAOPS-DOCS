@@ -15,21 +15,10 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - name: Verify versions
-        run: |
-          echo "Node: $(node -v)"
-          echo "NPM: $(npm -v)"
-      - name: Show directory
-        run: |
-          ls -la
-          cat package.json
       - name: Install
-        run: |
-          npm install 2>&1 | tail -20
-      - name: Check node_modules
-        run: |
-          ls node_modules/@docusaurus/core/package.json
-          cat node_modules/@docusaurus/core/package.json | grep '"version"'
+        run: npm install 2>&1
       - name: Build
         run: |
-          npx docusaurus build 2>&1
+          echo "=== Starting build ==="
+          npx docusaurus build 2>&1 | head -100
+          echo "=== Build done ==="
