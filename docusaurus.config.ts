@@ -1,11 +1,10 @@
 import type {Config} from "@docusaurus/types";
-import MarkdownError from "@docusaurus/MarkdownError";
 
 const config: Config = {
   title: "REAOPS Documentation",
-  url: "https://mistminterm.github.io",
+  url: "https://misterminter.github.io",
   baseUrl: "/REAOPS-DOCS/",
-  organizationName: "MistMinterm",
+  organizationName: "MisterMinter",
   projectName: "REAOPS-DOCS",
   presets: [
     [
