@@ -23,7 +23,7 @@ jobs:
       - name: Install
         run: npm install
       - name: Build
-        run: npm run build
+        run: npx docusaurus build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
         with:
