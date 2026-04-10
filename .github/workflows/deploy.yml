@@ -21,10 +21,19 @@ jobs:
         with:
           node-version: '20'
       - name: Install dependencies
-        run: npm install
+        run: npm install 2>&1 | tail -5
       - name: Build
-        run: npm run build
+        run: |
+          echo "=== BUILD START ==="
+          npm run build 2>&1
+          BUILD_EXIT=$?
+          echo "=== BUILD EXIT CODE: $BUILD_EXIT ==="
+          echo "=== BUILD DIRECTORY ==="
+          ls -la build/ 2>/dev/null || echo "No build directory!"
+          echo "=== /BUILD DIRECTORY ==="
+          exit $BUILD_EXIT
       - name: Deploy
+        if: success()
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
