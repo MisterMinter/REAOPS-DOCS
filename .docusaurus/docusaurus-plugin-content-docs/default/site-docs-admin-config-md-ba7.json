@@ -1,0 +1,19 @@
+{
+  "id": "admin/config",
+  "title": "Admin Configuration",
+  "description": "Admin-only settings.",
+  "source": "@site/docs/admin/config.md",
+  "sourceDirName": "admin",
+  "slug": "/admin/config",
+  "permalink": "/REAOPS-DOCS/docs/admin/config",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "defaultSidebar",
+  "next": {
+    "title": "REAOPS Setup",
+    "permalink": "/REAOPS-DOCS/docs/getting-started/setup"
+  }
+}
