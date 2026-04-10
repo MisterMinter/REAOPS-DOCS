@@ -15,15 +15,21 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - name: Verify Node version
+      - name: Verify versions
         run: |
-          echo "Node version: $(node -v)"
-          echo "NPM version: $(npm -v)"
-      - name: Clear any cache
+          echo "Node: $(node -v)"
+          echo "NPM: $(npm -v)"
+      - name: Show directory
         run: |
-          rm -rf node_modules package-lock.json .docusaurus
-          npm cache clean --force
+          ls -la
+          cat package.json
       - name: Install
-        run: npm install
+        run: |
+          npm install 2>&1 | tail -20
+      - name: Check node_modules
+        run: |
+          ls node_modules/@docusaurus/core/package.json
+          cat node_modules/@docusaurus/core/package.json | grep '"version"'
       - name: Build
-        run: npm run build
+        run: |
+          npx docusaurus build 2>&1
