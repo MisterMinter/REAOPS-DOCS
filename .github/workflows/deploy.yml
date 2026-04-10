@@ -16,22 +16,14 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v5
-      - name: Setup Node.js
+      - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - name: Install dependencies
-        run: npm install 2>&1 | tail -5
+      - name: Install
+        run: npm install
       - name: Build
-        run: |
-          echo "=== BUILD START ==="
-          npm run build 2>&1
-          BUILD_EXIT=$?
-          echo "=== BUILD EXIT CODE: $BUILD_EXIT ==="
-          echo "=== BUILD DIRECTORY ==="
-          ls -la build/ 2>/dev/null || echo "No build directory!"
-          echo "=== /BUILD DIRECTORY ==="
-          exit $BUILD_EXIT
+        run: npx docusaurus build 2>&1 | head -100
       - name: Deploy
         if: success()
         uses: peaceiris/actions-gh-pages@v3
