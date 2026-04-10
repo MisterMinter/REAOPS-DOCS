@@ -20,28 +20,12 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
       - name: Install dependencies
-        run: |
-          echo "Node version: $(node -v)"
-          echo "NPM version: $(npm -v)"
-          npm install
-        env:
-          DEBUG: "*"
+        run: npm install
       - name: Build
-        run: |
-          echo "Building..."
-          npm run build 2>&1
-      - name: Check build output
-        run: |
-          ls -la build/ 2>/dev/null || echo "No build directory!"
-      - name: Upload artifact
-        if: success()
-        uses: actions/upload-pages-artifact@v4
+        run: npm run build
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          path: ./build
-      - name: Deploy to GitHub Pages
-        if: success()
-        id: deployment
-        uses: actions/deploy-pages@v5
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
