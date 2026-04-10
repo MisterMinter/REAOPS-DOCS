@@ -23,7 +23,9 @@ jobs:
       - name: Install
         run: npm install
       - name: Build
-        run: npx docusaurus build 2>&1 | head -100
+        run: |
+          set -o pipefail
+          npx docusaurus build 2>&1 || { echo "BUILD FAILED"; exit 1; }
       - name: Deploy
         if: success()
         uses: peaceiris/actions-gh-pages@v3
