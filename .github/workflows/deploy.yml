@@ -21,21 +21,11 @@ jobs:
         with:
           node-version: '20'
       - name: Clean
-        run: |
-          rm -rf node_modules package-lock.json .docusaurus
+        run: rm -rf node_modules package-lock.json .docusaurus
       - name: Install
         run: npm install
       - name: Build
-        run: |
-          echo "=== Node version ==="
-          node -v
-          echo "=== NPM version ==="
-          npm -v
-          echo "=== Docusaurus version ==="
-          npx docusaurus --version
-          echo "=== Starting build ==="
-          npm run build 2>&1
-          echo "=== Exit code: $? ==="
+        run: npx docusaurus build
       - name: Upload artifact
         if: success()
         uses: actions/upload-pages-artifact@v4
