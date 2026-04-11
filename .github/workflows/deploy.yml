@@ -20,10 +20,13 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - name: Clear all caches
-        run: |
-          npm cache clean --force
-          rm -rf node_modules package-lock.json .docusaurus
+      - name: Get npm cache directory
+        id: npm-cache
+        run: echo "dir=$(npm config get cache)" >> $GITHUB_OUTPUT
+      - name: Clean npm cache
+        run: rm -rf ${{ steps.npm-cache.outputs.dir }}
+      - name: Clean node_modules
+        run: rm -rf node_modules package-lock.json .docusaurus
       - name: Install dependencies
         run: npm install
       - name: Build
