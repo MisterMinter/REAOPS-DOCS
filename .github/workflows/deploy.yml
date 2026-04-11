@@ -20,23 +20,21 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '18'
-      - name: Verify Node
+      - name: Clear all caches
         run: |
-          echo "Node version: $(node -v)"
-          echo "NPM version: $(npm -v)"
-      - name: Clear npm cache
-        run: npm cache clean --force
+          npm cache clean --force
+          rm -rf node_modules package-lock.json .docusaurus
       - name: Install dependencies
-        run: |
-          rm -rf node_modules package-lock.json
-          npm install --legacy-peer-deps 2>&1
+        run: npm install --legacy-peer-deps
       - name: Build
         run: |
-          echo "=== Starting build ==="
-          npx docusaurus build 2>&1
-          echo "=== Build finished ==="
+          echo "=== Build output ==="
+          npm run build 2>&1
+          echo "=== End build ==="
       - name: Check build output
-        run: ls -la build/
+        run: |
+          echo "Build directory:"
+          ls -la build/ 2>/dev/null || echo "No build directory!"
       - name: Upload artifact
         if: success()
         uses: actions/upload-pages-artifact@v4
