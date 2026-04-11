@@ -23,7 +23,7 @@ jobs:
       - name: Clean
         run: rm -rf node_modules package-lock.json .docusaurus build
       - name: Install
-        run: npm install
+        run: npm install --legacy-peer-deps
       - name: Build
         run: npm run build
       - name: Upload artifact
