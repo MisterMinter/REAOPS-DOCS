@@ -26,6 +26,11 @@ jobs:
           rm -rf node_modules package-lock.json .docusaurus
       - name: Install dependencies
         run: npm install --force
+      - name: Check webpack version
+        run: |
+          echo "=== webpack version ==="
+          npm ls webpack
+          echo "=== end webpack ==="
       - name: Build
         run: npm run build
       - name: Upload artifact
