@@ -21,9 +21,9 @@ jobs:
         with:
           node-version: '20'
       - name: Install
-        run: npm install
+        run: npm install --legacy-peer-deps
       - name: Build
-        run: npx docusaurus build
+        run: npm run build
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
