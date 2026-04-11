@@ -1,8 +1,21 @@
 module.exports = {
-  title: "REAOPS Documentation",
+  title: "REAOPS Docs",
+  tagline: "Documentation",
   url: "https://misterminter.github.io",
   baseUrl: "/REAOPS-DOCS/",
   organizationName: "MisterMinter",
   projectName: "REAOPS-DOCS",
-  presets: ["@docusaurus/preset-classic"],
+  onBrokenLinks: "warn",
+  onBrokenMarkdownLinks: "warn",
+  presets: [
+    [
+      "@docusaurus/preset-classic",
+      {
+        docs: {
+          routeBasePath: "/",
+          sidebarPath: false,
+        },
+      },
+    ],
+  ],
 };
