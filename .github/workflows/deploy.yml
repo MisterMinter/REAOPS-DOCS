@@ -19,26 +19,19 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: '20'
       - name: Clear all caches
         run: |
           npm cache clean --force
           rm -rf node_modules package-lock.json .docusaurus
       - name: Install dependencies
-        run: npm install --force
-      - name: Check webpack version
-        run: |
-          echo "=== webpack version ==="
-          npm ls webpack
-          echo "=== end webpack ==="
+        run: npm install
       - name: Build
         run: npm run build
       - name: Upload artifact
-        if: success()
         uses: actions/upload-pages-artifact@v4
         with:
           path: ./build
       - name: Deploy
-        if: success()
         id: deployment
         uses: actions/deploy-pages@v4
