@@ -8,11 +8,14 @@ module.exports = {
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   webpack: {
-    configure: (webpackConfig) => {
-      // Remove ProgressPlugin which has incompatible options with newer webpack
-      webpackConfig.plugins = webpackConfig.plugins.filter(
-        (plugin) => plugin.constructor.name !== 'ProgressPlugin'
-      );
+    configure: (webpackConfig, isServer) => {
+      // Filter out any plugin with ProgressPlugin or similar
+      if (webpackConfig.plugins) {
+        webpackConfig.plugins = webpackConfig.plugins.filter((plugin) => {
+          const name = plugin.constructor?.name || '';
+          return !name.includes('Progress');
+        });
+      }
       return webpackConfig;
     },
   },
