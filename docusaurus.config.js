@@ -7,6 +7,15 @@ module.exports = {
   projectName: 'REAOPS-DOCS',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
+  webpack: {
+    configure: (webpackConfig) => {
+      // Remove ProgressPlugin which has incompatible options with newer webpack
+      webpackConfig.plugins = webpackConfig.plugins.filter(
+        (plugin) => plugin.constructor.name !== 'ProgressPlugin'
+      );
+      return webpackConfig;
+    },
+  },
   presets: [
     [
       'classic',
