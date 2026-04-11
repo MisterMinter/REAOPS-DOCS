@@ -1,16 +1,20 @@
 module.exports = {
-  title: "REAOPS Documentation",
-  url: "https://misterminter.github.io",
-  baseUrl: "/REAOPS-DOCS/",
-  organizationName: "MisterMinter",
-  projectName: "REAOPS-DOCS",
+  title: 'REAOPS Documentation',
+  tagline: 'Documentation for REAOPS',
+  url: 'https://misterminter.github.io',
+  baseUrl: '/REAOPS-DOCS/',
+  organizationName: 'MisterMinter',
+  projectName: 'REAOPS-DOCS',
+  onBrokenLinks: 'throw',
+  onBrokenMarkdownLinks: 'warn',
   presets: [
     [
-      "@docusaurus/preset-classic",
+      'classic',
       {
         docs: {
-          sidebarPath: "./sidebars.js",
+          sidebarPath: require.resolve('./sidebars.js'),
         },
+        blog: false,
       },
     ],
   ],
