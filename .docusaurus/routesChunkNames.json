@@ -1,13 +1,4 @@
 {
-  "/REAOPS-DOCS/blog-462": {
-    "__comp": "a6aa9e1f",
-    "__context": {
-      "plugin": "36994c47"
-    },
-    "sidebar": "814f3328",
-    "items": [],
-    "__props": "9c75075a"
-  },
   "/REAOPS-DOCS/docs-38a": {
     "__comp": "5e95c892",
     "__context": {
@@ -36,5 +27,12 @@
   "/REAOPS-DOCS/docs/workflows/workflow-4e3": {
     "__comp": "17896441",
     "content": "74de5c3e"
+  },
+  "/REAOPS-DOCS/-80f": {
+    "__comp": "1df93b7f",
+    "__context": {
+      "plugin": "a7456010"
+    },
+    "config": "5e9f5e1a"
   }
 }

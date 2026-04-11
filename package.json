@@ -10,10 +10,9 @@
     "deploy": "docusaurus deploy"
   },
   "dependencies": {
-    "@docusaurus/core": "3.4.0",
-    "@docusaurus/preset-classic": "3.4.0",
+    "@docusaurus/core": "2.4.3",
+    "@docusaurus/preset-classic": "2.4.3",
     "react": "^18.0.0",
-    "react-dom": "^18.0.0",
-    "typescript": "^5.0.0"
+    "react-dom": "^18.0.0"
   }
 }

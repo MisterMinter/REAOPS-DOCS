@@ -11,7 +11,7 @@ const config: Config = {
       "@docusaurus/preset-classic",
       {
         docs: {
-          sidebarPath: require("./sidebars").default,
+          sidebarPath: require("./sidebars.js"),
         },
         theme: {
           customCss: "./src/css/custom.css",

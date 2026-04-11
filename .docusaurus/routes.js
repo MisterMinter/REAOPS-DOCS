@@ -3,11 +3,6 @@ import ComponentCreator from '@docusaurus/ComponentCreator';
 
 export default [
   {
-    path: '/REAOPS-DOCS/blog',
-    component: ComponentCreator('/REAOPS-DOCS/blog', '462'),
-    exact: true
-  },
-  {
     path: '/REAOPS-DOCS/docs',
     component: ComponentCreator('/REAOPS-DOCS/docs', '38a'),
     routes: [
@@ -48,6 +43,11 @@ export default [
         ]
       }
     ]
+  },
+  {
+    path: '/REAOPS-DOCS/',
+    component: ComponentCreator('/REAOPS-DOCS/', '80f'),
+    exact: true
   },
   {
     path: '*',

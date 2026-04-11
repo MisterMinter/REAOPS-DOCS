@@ -11,10 +11,7 @@
       "direction": "ltr",
       "htmlLang": "en",
       "calendar": "gregory",
-      "path": "en",
-      "translate": false,
-      "url": "https://misterminter.github.io",
-      "baseUrl": "/REAOPS-DOCS/"
+      "path": "en"
     }
   }
 }

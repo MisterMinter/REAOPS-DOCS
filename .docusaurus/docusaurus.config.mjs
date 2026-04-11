@@ -29,34 +29,24 @@ export default {
     ],
     "localeConfigs": {}
   },
-  "storage": {
-    "type": "localStorage",
-    "namespace": false
-  },
   "future": {
-    "v4": {
-      "removeLegacyPostBuildHeadAttribute": false,
-      "useCssCascadeLayers": false,
-      "siteStorageNamespacing": false,
-      "fasterByDefault": false,
-      "mdx1CompatDisabledByDefault": false
-    },
-    "faster": {
+    "experimental_faster": {
       "swcJsLoader": false,
       "swcJsMinimizer": false,
       "swcHtmlMinimizer": false,
       "lightningCssMinimizer": false,
       "mdxCrossCompilerCache": false,
-      "rspackBundler": false,
-      "rspackPersistentCache": false,
-      "ssgWorkerThreads": false,
-      "gitEagerVcs": false
+      "rspackBundler": false
     },
-    "experimental_vcs": {},
+    "experimental_storage": {
+      "type": "localStorage",
+      "namespace": false
+    },
     "experimental_router": "browser"
   },
   "onBrokenLinks": "throw",
   "onBrokenAnchors": "warn",
+  "onBrokenMarkdownLinks": "warn",
   "onDuplicateRoutes": "warn",
   "staticDirectories": [
     "static"
@@ -244,7 +234,6 @@ export default {
   "markdown": {
     "format": "mdx",
     "mermaid": false,
-    "emoji": true,
     "mdx1Compat": {
       "comments": true,
       "admonitions": true,
@@ -252,10 +241,6 @@ export default {
     },
     "anchors": {
       "maintainCase": false
-    },
-    "hooks": {
-      "onBrokenMarkdownLinks": "warn",
-      "onBrokenMarkdownImages": "throw"
     }
   }
 };
