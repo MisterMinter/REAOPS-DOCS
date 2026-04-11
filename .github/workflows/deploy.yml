@@ -16,18 +16,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v5
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: '18'
-      - name: Clear cache
+      - name: Create test page
         run: |
-          npm cache clean --force
-          rm -rf node_modules package-lock.json
-      - name: Install
-        run: npm install --legacy-peer-deps
-      - name: Build
-        run: npm run build
+          mkdir -p build
+          echo "<html><body><h1>REAOPS Docs Test</h1></body></html>" > build/index.html
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
