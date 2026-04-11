@@ -20,21 +20,28 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - name: Get npm cache directory
-        id: npm-cache
-        run: echo "dir=$(npm config get cache)" >> $GITHUB_OUTPUT
-      - name: Clean npm cache
-        run: rm -rf ${{ steps.npm-cache.outputs.dir }}
-      - name: Clean node_modules
-        run: rm -rf node_modules package-lock.json .docusaurus
-      - name: Install dependencies
+      - name: Clean
+        run: |
+          rm -rf node_modules package-lock.json .docusaurus
+      - name: Install
         run: npm install
       - name: Build
-        run: npm run build
+        run: |
+          echo "=== Node version ==="
+          node -v
+          echo "=== NPM version ==="
+          npm -v
+          echo "=== Docusaurus version ==="
+          npx docusaurus --version
+          echo "=== Starting build ==="
+          npm run build 2>&1
+          echo "=== Exit code: $? ==="
       - name: Upload artifact
+        if: success()
         uses: actions/upload-pages-artifact@v4
         with:
           path: ./build
       - name: Deploy
+        if: success()
         id: deployment
         uses: actions/deploy-pages@v4
