@@ -1,0 +1,14 @@
+{
+  "id": "workflows/workflow",
+  "title": "Operational Workflows",
+  "description": "This document covers core REAOPS workflows.",
+  "source": "@site/docs/workflows/workflow.md",
+  "sourceDirName": "workflows",
+  "slug": "/workflows/workflow",
+  "permalink": "/REAOPS-DOCS/docs/workflows/workflow",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {}
+}

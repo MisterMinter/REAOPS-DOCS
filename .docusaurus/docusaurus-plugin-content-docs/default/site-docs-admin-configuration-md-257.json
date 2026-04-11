@@ -1,0 +1,23 @@
+{
+  "id": "admin/configuration",
+  "title": "Admin Configuration",
+  "description": "User Management",
+  "source": "@site/docs/admin/configuration.md",
+  "sourceDirName": "admin",
+  "slug": "/admin/configuration",
+  "permalink": "/REAOPS-DOCS/docs/admin/configuration",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "configuration",
+    "title": "Admin Configuration",
+    "sidebar_label": "Configuration"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Telegram Bot",
+    "permalink": "/REAOPS-DOCS/docs/user-guide/telegram"
+  }
+}

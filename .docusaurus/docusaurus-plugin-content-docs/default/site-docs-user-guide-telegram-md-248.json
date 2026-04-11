@@ -1,0 +1,27 @@
+{
+  "id": "user-guide/telegram",
+  "title": "Using Telegram",
+  "description": "The Telegram bot is the primary way to interact with REAOPS.",
+  "source": "@site/docs/user-guide/telegram.md",
+  "sourceDirName": "user-guide",
+  "slug": "/user-guide/telegram",
+  "permalink": "/REAOPS-DOCS/docs/user-guide/telegram",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "telegram",
+    "title": "Using Telegram",
+    "sidebar_label": "Telegram Bot"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/REAOPS-DOCS/docs/features/overview"
+  },
+  "next": {
+    "title": "Configuration",
+    "permalink": "/REAOPS-DOCS/docs/admin/configuration"
+  }
+}

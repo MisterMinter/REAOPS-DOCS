@@ -1,0 +1,27 @@
+{
+  "id": "getting-started/quick-start",
+  "title": "Quick Start Guide",
+  "description": "Get up and running with REAOPS in minutes.",
+  "source": "@site/docs/getting-started/quick-start.md",
+  "sourceDirName": "getting-started",
+  "slug": "/getting-started/quick-start",
+  "permalink": "/REAOPS-DOCS/docs/getting-started/quick-start",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "quick-start",
+    "title": "Quick Start Guide",
+    "sidebar_label": "Quick Start"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Introduction",
+    "permalink": "/REAOPS-DOCS/docs/getting-started/intro"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/REAOPS-DOCS/docs/features/overview"
+  }
+}
