@@ -4,14 +4,5 @@ module.exports = {
   baseUrl: "/REAOPS-DOCS/",
   organizationName: "MisterMinter",
   projectName: "REAOPS-DOCS",
-  presets: [
-    [
-      "@docusaurus/preset-classic",
-      {
-        docs: {
-          sidebarPath: "./sidebars.js",
-        },
-      },
-    ],
-  ],
+  presets: ["@docusaurus/preset-classic"],
 };
