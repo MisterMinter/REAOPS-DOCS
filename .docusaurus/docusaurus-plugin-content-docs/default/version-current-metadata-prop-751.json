@@ -1,0 +1,72 @@
+{
+  "pluginId": "default",
+  "version": "current",
+  "label": "Next",
+  "banner": null,
+  "badge": false,
+  "noIndex": false,
+  "className": "docs-version-current",
+  "isLast": true,
+  "docsSidebars": {
+    "sidebar": [
+      {
+        "type": "category",
+        "label": "docs",
+        "items": [
+          {
+            "type": "link",
+            "label": "REAOPS Setup",
+            "href": "/REAOPS-DOCS/docs/getting-started/setup",
+            "docId": "getting-started/setup"
+          },
+          {
+            "type": "link",
+            "label": "Operational Workflows",
+            "href": "/REAOPS-DOCS/docs/workflows/workflow",
+            "docId": "workflows/workflow"
+          },
+          {
+            "type": "link",
+            "label": "HubSpot Integration",
+            "href": "/REAOPS-DOCS/docs/integrations/hubspot",
+            "docId": "integrations/hubspot"
+          },
+          {
+            "type": "link",
+            "label": "Admin Configuration",
+            "href": "/REAOPS-DOCS/docs/admin/config",
+            "docId": "admin/config"
+          }
+        ],
+        "collapsed": true,
+        "collapsible": true
+      }
+    ]
+  },
+  "docs": {
+    "admin/config": {
+      "id": "admin/config",
+      "title": "Admin Configuration",
+      "description": "Admin-only settings.",
+      "sidebar": "sidebar"
+    },
+    "getting-started/setup": {
+      "id": "getting-started/setup",
+      "title": "REAOPS Setup",
+      "description": "Welcome to the REAOPS setup guide.",
+      "sidebar": "sidebar"
+    },
+    "integrations/hubspot": {
+      "id": "integrations/hubspot",
+      "title": "HubSpot Integration",
+      "description": "Mapping logic for HubSpot deals.",
+      "sidebar": "sidebar"
+    },
+    "workflows/workflow": {
+      "id": "workflows/workflow",
+      "title": "Operational Workflows",
+      "description": "This document covers core REAOPS workflows.",
+      "sidebar": "sidebar"
+    }
+  }
+}

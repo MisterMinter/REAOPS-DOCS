@@ -1,37 +1,31 @@
 {
-  "/REAOPS-DOCS/docs-38a": {
-    "__comp": "5e95c892",
+  "/REAOPS-DOCS/docs-d76": {
+    "__comp": "1be78505",
     "__context": {
-      "plugin": "aba21aa0"
-    }
+      "plugin": "f31f195f"
+    },
+    "versionMetadata": "935f2afb"
   },
-  "/REAOPS-DOCS/docs-53b": {
-    "__comp": "a7bd4aaa",
-    "__props": "6ca40f13"
-  },
-  "/REAOPS-DOCS/docs-5f6": {
-    "__comp": "a94703ab"
-  },
-  "/REAOPS-DOCS/docs/admin/config-2bd": {
+  "/REAOPS-DOCS/docs/admin/config-dfd": {
     "__comp": "17896441",
     "content": "ba76b8a1"
   },
-  "/REAOPS-DOCS/docs/getting-started/setup-d92": {
+  "/REAOPS-DOCS/docs/getting-started/setup-519": {
     "__comp": "17896441",
     "content": "530ea7a0"
   },
-  "/REAOPS-DOCS/docs/integrations/hubspot-410": {
+  "/REAOPS-DOCS/docs/integrations/hubspot-74a": {
     "__comp": "17896441",
     "content": "a332b307"
   },
-  "/REAOPS-DOCS/docs/workflows/workflow-4e3": {
+  "/REAOPS-DOCS/docs/workflows/workflow-6c3": {
     "__comp": "17896441",
     "content": "74de5c3e"
   },
-  "/REAOPS-DOCS/-80f": {
+  "/REAOPS-DOCS/-860": {
     "__comp": "1df93b7f",
     "__context": {
-      "plugin": "a7456010"
+      "plugin": "fa4c9b24"
     },
     "config": "5e9f5e1a"
   }

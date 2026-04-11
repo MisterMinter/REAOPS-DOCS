@@ -13,9 +13,8 @@ export default {
     [
       "@docusaurus/preset-classic",
       {
-        "docs": {},
-        "theme": {
-          "customCss": "./src/css/custom.css"
+        "docs": {
+          "sidebarPath": "./sidebars.js"
         }
       }
     ]
@@ -29,23 +28,7 @@ export default {
     ],
     "localeConfigs": {}
   },
-  "future": {
-    "experimental_faster": {
-      "swcJsLoader": false,
-      "swcJsMinimizer": false,
-      "swcHtmlMinimizer": false,
-      "lightningCssMinimizer": false,
-      "mdxCrossCompilerCache": false,
-      "rspackBundler": false
-    },
-    "experimental_storage": {
-      "type": "localStorage",
-      "namespace": false
-    },
-    "experimental_router": "browser"
-  },
   "onBrokenLinks": "throw",
-  "onBrokenAnchors": "warn",
   "onBrokenMarkdownLinks": "warn",
   "onDuplicateRoutes": "warn",
   "staticDirectories": [
@@ -65,11 +48,6 @@ export default {
       "sidebar": {
         "hideable": false,
         "autoCollapseCategories": false
-      }
-    },
-    "blog": {
-      "sidebar": {
-        "groupByYear": true
       }
     },
     "metadata": [],
@@ -232,15 +210,6 @@ export default {
   "titleDelimiter": "|",
   "noIndex": false,
   "markdown": {
-    "format": "mdx",
-    "mermaid": false,
-    "mdx1Compat": {
-      "comments": true,
-      "admonitions": true,
-      "headingIds": true
-    },
-    "anchors": {
-      "maintainCase": false
-    }
+    "mermaid": false
   }
 };

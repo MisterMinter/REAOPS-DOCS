@@ -1,4 +1,5 @@
 {
+  "unversionedId": "integrations/hubspot",
   "id": "integrations/hubspot",
   "title": "HubSpot Integration",
   "description": "Mapping logic for HubSpot deals.",
@@ -7,17 +8,16 @@
   "slug": "/integrations/hubspot",
   "permalink": "/REAOPS-DOCS/docs/integrations/hubspot",
   "draft": false,
-  "unlisted": false,
   "tags": [],
   "version": "current",
   "frontMatter": {},
-  "sidebar": "defaultSidebar",
+  "sidebar": "sidebar",
   "previous": {
-    "title": "REAOPS Setup",
-    "permalink": "/REAOPS-DOCS/docs/getting-started/setup"
-  },
-  "next": {
     "title": "Operational Workflows",
     "permalink": "/REAOPS-DOCS/docs/workflows/workflow"
+  },
+  "next": {
+    "title": "Admin Configuration",
+    "permalink": "/REAOPS-DOCS/docs/admin/config"
   }
 }

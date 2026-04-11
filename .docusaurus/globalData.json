@@ -8,35 +8,35 @@
           "label": "Next",
           "isLast": true,
           "path": "/REAOPS-DOCS/docs",
-          "mainDocId": "admin/config",
+          "mainDocId": "getting-started/setup",
           "docs": [
             {
               "id": "admin/config",
               "path": "/REAOPS-DOCS/docs/admin/config",
-              "sidebar": "defaultSidebar"
+              "sidebar": "sidebar"
             },
             {
               "id": "getting-started/setup",
               "path": "/REAOPS-DOCS/docs/getting-started/setup",
-              "sidebar": "defaultSidebar"
+              "sidebar": "sidebar"
             },
             {
               "id": "integrations/hubspot",
               "path": "/REAOPS-DOCS/docs/integrations/hubspot",
-              "sidebar": "defaultSidebar"
+              "sidebar": "sidebar"
             },
             {
               "id": "workflows/workflow",
               "path": "/REAOPS-DOCS/docs/workflows/workflow",
-              "sidebar": "defaultSidebar"
+              "sidebar": "sidebar"
             }
           ],
           "draftIds": [],
           "sidebars": {
-            "defaultSidebar": {
+            "sidebar": {
               "link": {
-                "path": "/REAOPS-DOCS/docs/admin/config",
-                "label": "admin/config"
+                "path": "/REAOPS-DOCS/docs/getting-started/setup",
+                "label": "getting-started/setup"
               }
             }
           }

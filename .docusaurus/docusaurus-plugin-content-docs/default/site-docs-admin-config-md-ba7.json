@@ -1,4 +1,5 @@
 {
+  "unversionedId": "admin/config",
   "id": "admin/config",
   "title": "Admin Configuration",
   "description": "Admin-only settings.",
@@ -7,13 +8,12 @@
   "slug": "/admin/config",
   "permalink": "/REAOPS-DOCS/docs/admin/config",
   "draft": false,
-  "unlisted": false,
   "tags": [],
   "version": "current",
   "frontMatter": {},
-  "sidebar": "defaultSidebar",
-  "next": {
-    "title": "REAOPS Setup",
-    "permalink": "/REAOPS-DOCS/docs/getting-started/setup"
+  "sidebar": "sidebar",
+  "previous": {
+    "title": "HubSpot Integration",
+    "permalink": "/REAOPS-DOCS/docs/integrations/hubspot"
   }
 }

@@ -1,4 +1,5 @@
 {
+  "unversionedId": "workflows/workflow",
   "id": "workflows/workflow",
   "title": "Operational Workflows",
   "description": "This document covers core REAOPS workflows.",
@@ -7,12 +8,15 @@
   "slug": "/workflows/workflow",
   "permalink": "/REAOPS-DOCS/docs/workflows/workflow",
   "draft": false,
-  "unlisted": false,
   "tags": [],
   "version": "current",
   "frontMatter": {},
-  "sidebar": "defaultSidebar",
+  "sidebar": "sidebar",
   "previous": {
+    "title": "REAOPS Setup",
+    "permalink": "/REAOPS-DOCS/docs/getting-started/setup"
+  },
+  "next": {
     "title": "HubSpot Integration",
     "permalink": "/REAOPS-DOCS/docs/integrations/hubspot"
   }
