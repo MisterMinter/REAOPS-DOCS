@@ -20,17 +20,23 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '18'
-      - name: Clear npm cache
+      - name: Verify Node
         run: |
-          npm cache clean --force
-          rm -rf node_modules package-lock.json
+          echo "Node version: $(node -v)"
+          echo "NPM version: $(npm -v)"
+      - name: Clear npm cache
+        run: npm cache clean --force
       - name: Install dependencies
-        run: npm install --legacy-peer-deps 2>&1
+        run: |
+          rm -rf node_modules package-lock.json
+          npm install --legacy-peer-deps 2>&1
       - name: Build
         run: |
-          set -x
-          npm run build 2>&1
-          echo "Exit code: $?"
+          echo "=== Starting build ==="
+          npx docusaurus build 2>&1
+          echo "=== Build finished ==="
+      - name: Check build output
+        run: ls -la build/
       - name: Upload artifact
         if: success()
         uses: actions/upload-pages-artifact@v4
